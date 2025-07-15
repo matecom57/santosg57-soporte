@@ -20,3 +20,5 @@ Contents
 
    usage
    api
+   proveedores/proveedores
+
