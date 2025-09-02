@@ -3,6 +3,27 @@ dcm2bids
 
 https://unfmontreal.github.io/Dcm2Bids/3.2.0/get-started/install/#python
 
+**Installation**
+
+There are several ways to install dcm2bids.
+
+**Containers**
+
+
+We provide a container image that includes both dcm2niix and dcm2bids as well as pydeface and the BIDS validator. You can install it using Docker or Apptainer/Singularity.
+
+**Docker**
+
+.. code:: Bash
+
+   export VERSION=3.2.0
+   docker pull unfmontreal/dcm2bids:${VERSION}
+
+**Installing binary executables**
+
+**Installing using pip or conda**
+
+**Dependencies**
 
 Installing using pip or conda
 
@@ -18,6 +39,10 @@ Install dcm2bids
    conda install -c conda-forge dcm2niix
 
 Create environment.yml
+
+.. code:: Bash
+
+   mkdir dcm2bids-proj
 
 You can create a project directory anywhere on your computer, it does not matter. 
 You can create ``dcm2bids-proj`` if you need inspiration.
