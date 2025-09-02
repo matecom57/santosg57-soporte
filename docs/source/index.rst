@@ -23,4 +23,5 @@ Contents
    spm12
    cat
    modules
+   vagrant
 
