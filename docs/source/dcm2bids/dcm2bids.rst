@@ -205,6 +205,95 @@ optional,
 defaulting to moving the files inside a new ``tmp_dcm2bids/helper`` directory from where you run the command, the current directory.
 
 
+.. code:: Bash
+
+   dcm2bids_helper -d sourcedata/dcm_qa_nih/In/
+
+**Finding what you need in tmp_dcm2bids/helper**
+
+You should now able to see a list of compressed NIfTI files (nii.gz) with their respective sidecar files (.json). You can tell which file 
+goes with which file based on their identical names, only with a
+
+.. code:: Bash
+
+   ls tmp_dcm2bids/helper
+
+As you can see, it is not necessarily easy to tell which scan files (nii.gz) refer to which acquisitions from their names only. That is 
+why you have to go through their sidecar files to find unique identifiers for one acquisition you want to BIDSify.
+
+Again, when you will do it with your DICOMs, you will want to run dcm2bids_helper on a typical session of one of your participants. You 
+will probably get more files than this example
+
+For the purpose of the tutorial, we will be interested in three specific acquisitions, namely:
+
+1. 004_In_DCM2NIIX_regression_test_20180918114023
+
+2. 003_In_EPI_PE=AP_20180918121230
+
+3. 004_In_EPI_PE=PA_20180918121230
+
+The first is an resting-state fMRI acquisition whereas the second and third are fieldmap EPI.
+
+**Setting up the configuration file**
+
+Once you found the data you want to BIDSify, you can start setting up your configuration file. The file name is arbitrary but for the 
+readability purpose, you can name it ``dcm2bids_config.json`` like in the tutorial. You can create in the ``code/`` directory. Use any 
+code 
+editor to create the file and add the following content:
+
+Once you are sure of you matching criteria, you can update your configuration file with the appropriate info.
+
+.. code:: Bash
+
+   {
+     "descriptions": [
+       {
+         "id": "id_task-rest",
+         "datatype": "func",
+         "suffix": "bold",
+         "custom_entities": "task-rest",
+         "criteria": {
+           "SeriesDescription": "Axial EPI-FMRI (Interleaved I to S)*"
+         },
+         "sidecar_changes": {
+           "TaskName": "rest"
+         }
+       },
+       {
+         "datatype": "fmap",
+         "suffix": "epi",
+         "criteria": {
+           "SeriesDescription": "EPI PE=*"
+         },
+         "sidecar_changes": {
+           "intendedFor": ["id_task-rest"]
+         }
+       }
+     ]
+   }
+
+For fieldmaps, you need to add an ``"intendedFor"`` as well as ``id`` field to show that these fieldmaps should be used with your fMRI 
+acquisition. Have a look at the explanation of intendedFor in the documentation or in the BIDS specification.
+
+Now that you have a configuration file ready, it is time to finally run ``dcm2bids``.
+
+**Running dcm2bids**
+
+.. code:: Bash
+
+   dcm2bids -d sourcedata/dcm_qa_nih/In/ -p ID01 -c code/dcm2bids_config.json --auto_extract_entities
+
+You can now have a look in the newly created directory sub-ID01 and discover your converted data!
+
+.. code:: Bash
+
+   tree sub-ID01/
+
+
+
+
+
+
 
 
 

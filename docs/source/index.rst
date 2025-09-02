@@ -24,4 +24,5 @@ Contents
    dcm2bids/dcm2bids
    ssh
    spm12
+   cat
 
