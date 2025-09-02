@@ -18,9 +18,6 @@ Contents
 
 .. toctree::
 
-   usage
-   api
-   proveedores/proveedores
    dcm2bids/dcm2bids
    ssh
    spm12
