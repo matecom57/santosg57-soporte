@@ -22,4 +22,5 @@ Contents
    ssh
    spm12
    cat
+   modules
 
