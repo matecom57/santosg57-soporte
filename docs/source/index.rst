@@ -21,4 +21,5 @@ Contents
    usage
    api
    proveedores/proveedores
+   dcm2bids/dcm2bids
 
