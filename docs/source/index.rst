@@ -23,3 +23,5 @@ Contents
    proveedores/proveedores
    dcm2bids/dcm2bids
    ssh
+   spm12
+
