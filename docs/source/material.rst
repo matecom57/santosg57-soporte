@@ -1,7 +1,24 @@
 material
 ========
 
+Translate-shell
+---------------
+
+.. code:: Bash
+
+   sudo apt-get install translate-shell
+
+.. code:: Bash
+
+   trans :es "what is going on your life?"
+
+   trans -b :es thanks
+
+   trans :es file:///home/sapoclay/gtrans.txt
+
+
 generate qr
+-----------
 
 https://qr.io/?gad_source=1&gad_campaignid=11398459434&gbraid=0AAAAAC6IOXIsuH3Y3JQyJM593vOfZizrH&gclid=CjwKCAjwq9rFBhAIEiwAGVAZP5wJyXM2ZAF8G0trdvDNAWKQT4SADoDeAw6ZQKpLqeVkJxyy-Y_ZcBoC-I0QAvD_BwE
 
