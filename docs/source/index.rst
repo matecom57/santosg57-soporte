@@ -25,4 +25,5 @@ Contents
    modules
    vagrant
    material
+   software
 
