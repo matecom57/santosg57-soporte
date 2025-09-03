@@ -20,6 +20,8 @@ Le recomendamos leer la página completa antes de comenzar a instalar cualquier 
 We offer recommendations at the bottom of the page that will take care of the whole installation process in one go and make use of a 
 dedicated environment for dcm2bids.
 
+Ofrecemos recomendaciones al final de la página que se encargarán de todo el proceso de instalación de una sola vez 
+y harán uso de un entorno dedicado para dcm2bids.
 
 **Dependencies**
 
