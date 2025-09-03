@@ -8,11 +8,19 @@ https://unfmontreal.github.io/Dcm2Bids/3.2.0/get-started/install/#python
 Before you can use dcm2bids, you will need to get it installed. This page guides you through a minimal, typical dcm2bids installation 
 workflow that is sufficient to complete all dcm2bids tasks.
 
+Antes de poder usar dcm2bids, deberá instalarlo. Esta página le guiará a través de un flujo de trabajo de instalación mínimo y típico de dcm2bids, suficiente para completar todas sus tareas.
+
+
 We recommend to skim-read the full page before you start installing anything considering there are many ways to install software in the 
 Python ecosystem which are often dependent on the familiarity and preference of the user.
 
+Le recomendamos leer la página completa antes de comenzar a instalar cualquier cosa, teniendo en cuenta que hay muchas formas de instalar software en el ecosistema Python que a menudo dependen de la familiaridad y preferencia del usuario.
+
+
 We offer recommendations at the bottom of the page that will take care of the whole installation process in one go and make use of a 
 dedicated environment for dcm2bids.
+
+We offer recommendations at the bottom of the page that will take care of the whole installation process in one go and make use of a dedicated environment for dcm2bids.
 
 **Dependencies**
 
@@ -21,10 +29,16 @@ dedicated environment for dcm2bids.
 As dcm2bids is a Python package, the first prerequisite is that Python must be installed on the machine you will use dcm2bids. You will 
 need Python 3.8 or above to run dcm2bids properly.
 
+Dado que dcm2bids es un paquete de Python, el primer requisito es que Python esté instalado en el equipo donde se usará. Necesitará Python 3.8 o superior para ejecutar dcm2bids correctamente.
+
+
 If you are unsure what version(s) of Python is available on your machine, you can find out by opening a terminal and typing ``python 
 --version`` or ``python``. The former will output the version directly in the terminal while the latter will open an interactive Python 
 shell 
 with the version displayed in the first line.
+
+Si no está seguro de qué versiones de Python están disponibles en su equipo, puede averiguarlo abriendo una terminal y escribiendo python --version o python. La primera mostrará la versión directamente en la terminal, mientras que la segunda abrirá una consola interactiva de Python con la versión mostrada en la primera línea.
+
 
 .. code:: Bash
 
