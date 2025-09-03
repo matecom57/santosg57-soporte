@@ -59,5 +59,50 @@ Ver las diferencias existentes entre 2 ficheros de forma más visual
 
 https://geekland.eu/comparar-directorios-y-archivos-comando-diff-linux/
 
+dcm2bids
+--------
+
+**procesa.sh**
+
+.. code:: Bash
+
+   #!/bin/bash
+
+   git clone https://github.com/neurolabusc/dcm_qa_nih/ dcm_qa_nih
+
+   dcm2bids -d dcm_qa_nih/In/ -p ID01 -c dcm2bids_config.json --auto_extract_entities
+
+**dcm2bids_config.json**
+
+.. code:: Bash
+
+   {
+     "descriptions": [
+       {
+         "id": "id_task-rest",
+         "datatype": "func",
+         "suffix": "bold",
+         "custom_entities": "task-rest",
+         "criteria": {
+           "SeriesDescription": "Axial EPI-FMRI (Interleaved I to S)*"
+         },
+         "sidecar_changes": {
+           "TaskName": "rest"
+         }
+       },
+       {
+         "datatype": "fmap",
+         "suffix": "epi",
+         "criteria": {
+           "SeriesDescription": "EPI PE=*"
+         },
+         "sidecar_changes": {
+           "intendedFor": ["id_task-rest"]
+         }
+       }
+     ]
+   }
+
+
 
 

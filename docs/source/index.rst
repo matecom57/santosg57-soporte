@@ -24,4 +24,5 @@ Contents
    cat
    modules
    vagrant
+   material
 
