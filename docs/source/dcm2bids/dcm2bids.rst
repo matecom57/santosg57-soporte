@@ -20,7 +20,6 @@ Le recomendamos leer la página completa antes de comenzar a instalar cualquier 
 We offer recommendations at the bottom of the page that will take care of the whole installation process in one go and make use of a 
 dedicated environment for dcm2bids.
 
-We offer recommendations at the bottom of the page that will take care of the whole installation process in one go and make use of a dedicated environment for dcm2bids.
 
 **Dependencies**
 
@@ -47,11 +46,19 @@ Si no está seguro de qué versiones de Python están disponibles en su equipo, 
 If your system-wide version of Python is lower 3.8, it is okay. We will make sure to use a higher version in the isolated environment 
 that will be created for dcm2bids. The important part is to verify that Python is installed.
 
+Si la versión de Python de su sistema es inferior a la 3.8, no hay problema. Nos aseguraremos de usar una versión superior en el entorno aislado que se creará para dcm2bids. Lo importante es verificar que Python esté instalado.
+
+
 If you are a beginning user in the Python ecosystem, the odds are that you have installed Anaconda, which contains all Python versions so 
 you should be good. If you were not able to find out which version of Python is installed on your machine or find Anaconda on your 
 machine, we recommend that you install Python through Anaconda.
 
+Si eres un usuario principiante en el ecosistema de Python, probablemente tengas instalado Anaconda, que contiene todas las versiones de Python, así que no tendrás problemas. Si no lograste averiguar qué versión de Python tienes instalada en tu equipo o no encontraste Anaconda, te recomendamos instalar Python a través de Anaconda.
+
+
 We could install all the software one by one using a series of command:
+
+Podríamos instalar todo el software uno por uno usando una serie de comandos:
 
 .. code:: Bash
 
