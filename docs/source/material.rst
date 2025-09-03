@@ -16,4 +16,48 @@ https://qr.io/es/?gad_source=5&gad_campaignid=18652529461&gclid=EAIaIQobChMI7eni
 https://bitly.com/pages/landing/qr-codes?gad_source=5&gad_campaignid=20734617027&gclid=EAIaIQobChMI7enizLS6jwMVCDfUAR0zSw-eEAAYBSAAEgKWePD_BwE
 
 
+USAR DIFF PARA COMPARAR DIFERENCIAS ENTRE 2 DIRECTORIOS
+--------------------------------------
+
+Para usar Diff y obtener la diferencias existentes entre dos directorios tan solo tenéis que ejecutar un comando 
+del siguiente tipo:
+
+.. code:: Bash
+
+   diff -r -q 'directorio 1' 'directorio 2'
+
+El significado de cada uno de los parámetros es el siguiente:
+
+* ``diff`` : Es la utilidad para comparar directorios entre si o ficheros entre sí.
+
+* ``-r`` : Para indicar que 2 directorios se comparen de forma recursiva. En otras palabras con la opción -r 
+también se 
+compararán todos los subdirectorios que están dentro del directorio analizado.
+
+* ``-q`` : Para que solo salgan en pantalla los ficheros que difieren de un directorio a otro.
+
+* ``directorio 1`` : Es la ruta del primer directorio o fichero a comparar.
+
+* ``directorio 2`` : Es la ruta del segundo directorio o fichero a comparar.
+
+USAR DIFF PARA COMPARAR EL CONTENIDO DE DOS ARCHIVOS
+----------------------------------------
+
+Comparar si el contenido de 2 ficheros .odt es el mismo
+
+.. code:: Bash
+
+   diff '/home/joan/Borrar archivos temporales V1.odt' '/home/joan/Borrar archivos temporales V2.odt'
+
+Ver las diferencias existentes entre 2 ficheros de forma más visual
+-------------------------------------------------------------------
+
+.. code:: Bash
+
+   diff -y '/home/joan/Escritorio/Ver las diferencias entre 2 directorios o 2 ficheros/archivo 1.md' 
+'/home/joan/Escritorio/Ver las diferencias entre 2 directorios o 2 ficheros/archivo 2.md' | cat -n
+
+https://geekland.eu/comparar-directorios-y-archivos-comando-diff-linux/
+
+
 
