@@ -141,6 +141,53 @@ dcm2bids
      ]
    }
 
+Hipnosis_XNAT_Pablo
+-------------------
 
+dcm2bids_config.json :
+
+.. code:: Bash
+
+   {
+     "descriptions": [
+       {
+         "id": "id_task-rest",
+         "datatype": "func",
+         "suffix": "bold",
+         "custom_entities": "task-rest",
+         "criteria": {
+           "SidecarFilename": "006*"
+         }
+       },
+       {
+         "id": "id_task-rest",
+         "datatype": "func",
+         "suffix": "bold",
+         "custom_entities": "task-hypn",
+         "criteria": {
+           "SidecarFilename": "005*"
+         }
+       },
+       {
+         "datatype": "ant",
+         "suffix": "t1w",
+         "criteria": {
+           "SidecarFilename": "004*"
+         }
+       }
+     ]
+   }
+
+procesa.sh
+
+.. code:: Bash
+
+   #!/bin/bash
+
+   mkdir $1_procesa
+   cd $1_procesa
+   cp -r ../$1 $1
+
+   dcm2bids -d $1/ -p 01 -c ../dcm2bids_config.json
 
 
