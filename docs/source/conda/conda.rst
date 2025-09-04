@@ -28,3 +28,30 @@ can also access help from the command line with the --help flag:
 
    conda install --help
 
+The following commands are part of conda:
+
+.. code:: Bash
+
+   conda activate
+   conda clean
+   conda compare
+   conda config
+   conda create
+   conda deactivate
+   conda doctor
+   conda env
+   conda export
+   conda info
+   conda init
+   conda install
+   conda list
+   conda notices
+   conda package
+   conda repoquery
+   conda remove
+   conda rename
+   conda run
+   conda search
+   conda update
+
+
