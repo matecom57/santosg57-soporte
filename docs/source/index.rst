@@ -26,4 +26,5 @@ Contents
    vagrant
    material
    software
+   conda/conda
 
