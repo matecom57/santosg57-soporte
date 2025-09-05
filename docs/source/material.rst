@@ -190,4 +190,9 @@ procesa.sh
 
    dcm2bids -d $1/ -p 01 -c ../dcm2bids_config.json
 
+dcm2niix
+--------
+
+dcm2niix -b y -ba y -z y -f %3s_%f_%p_%t -o /Users/santosg/Hipnosis_XNAT_Pablo/411_procesa/tmp_dcm2bids/sub-29 
+411
 
