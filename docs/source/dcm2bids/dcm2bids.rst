@@ -380,6 +380,51 @@ You can now have a look in the newly created directory sub-ID01 and discover you
 
    tree sub-ID01/
 
+/home/santosg/dcm2bids
+----------------------
+
+scp1.sh
+
+.. code:: Bash
+
+   #!/bin/bash
+
+   scp santosg@penfield.inb.unam.mx:/misc/cannabis2/santosg/Hipnosis/*.zip .
+
+unzip1.sh
+
+.. code:: Bash
+
+   #!/bin/bash
+
+   dir=$(ls -1 *.zip)
+
+   for ss in $dir
+   do
+     echo $ss
+     unzip $ss
+   done
+
+convert.sh
+
+.. code:: Bash
+
+   #!/bin/bash
+
+   user="786"
+
+   mkdir ${user}_procesado
+   cd ${user}_procesado
+   cp -r ../$user .
+
+   dcm2bids -d $user/ -p ID01 -c ../dcm2bids_config.json 
+
+   cd ..
+
+
+
+
+
 
 
 
