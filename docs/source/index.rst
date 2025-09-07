@@ -29,4 +29,6 @@ Contents
    conda/conda
    apache
    linux
+   xnat/xnat
+
 
