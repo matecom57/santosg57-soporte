@@ -116,3 +116,6 @@ https://wiki.xnat.org/documentation/configuring-postgresql-for-xnat
    postgres:~$ logout
    xnat:~$
 
+Configuring database access
+
+
