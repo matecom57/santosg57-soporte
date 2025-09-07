@@ -18,3 +18,15 @@ How to install PHP on Ubuntu 22.04 in 5 steps
    sudo apt install php
    php --version
 
+.. code:: Bash
+
+   sudo nano  /var/www/html/info.php
+
+   <?php
+   phpinfo();
+   ?>
+
+   sudo systemctl restart apache2
+
+   http://server-ip/info.php
+
