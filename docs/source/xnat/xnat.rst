@@ -64,3 +64,55 @@ Secure the PostgreSQL Database Server
    postgres=# quit;
 
 
+Run the following command to change the default peer value in the scram-sha-256 field in the main PostgreSQL configuration file pg_hba.conf to enable password authentication on the server.
+
+
+.. code:: Bash
+
+   sudo sed -i '/^local/s/peer/scram-sha-256/' /etc/postgresql/17/main/pg_hba.conf
+
+   # Replace 17 with your installed PostgreSQL version number if it's different.
+
+   sudo systemctl restart postgresql
+
+
+https://wiki.xnat.org/documentation/prerequisites-for-installing-xnat#PrerequisitesforInstallingXNAT-configuring-other-jvm-options
+
+Prerequisites for Installing XNAT
+----------------------------------
+
+Notes on Installing Java 8
+
+Notes on Installing and Configuring Apache Tomcat
+
+There are a few configuration changes to prepare Tomcat for XNAT 1.8. We cover the required step of defining xnat.home for Tomcat in the XNAT Installation Guide. These others are optional.
+
+    Set other JVM options
+    Change the Tomcat service user and group
+    Install the Tomcat manager application
+
+
+Locating the Primary Tomcat Configuration File
+
+Make changes to your Tomcat configuration by modifying the primary Tomcat configuration file:
+
+    For Debian and Ubuntu systems, this is usually located in /etc/default/tomcat9.
+
+https://wiki.xnat.org/documentation/configuring-postgresql-for-xnat
+
+.. code:: Bash
+
+   xnat:~$ sudo su - postgres 
+   postgres:postgres$ createuser --createdb xnat
+   postgres:postgres$ createdb --owner=xnat xnat;
+   postgres:postgres$ psql
+   psql (12.6)
+   Type "help" for help.
+
+   postgres=# \password xnat
+   Enter new password:
+   Enter it again:
+   postgres=# \q
+   postgres:~$ logout
+   xnat:~$
+
