@@ -1,33 +1,41 @@
 Comandos Linux
 ==============
 
-**1. ls command**
+**1. ls**
 
-The ls command lists the content of a folder, including files and directories. Here’s the syntax:
+The ``ls`` command lists the content of a folder, including files and directories. Here’s the syntax:
 
-ls [options] [directory_or_path]
+.. code:: Bash
+
+   ls [options] [directory_or_path]
+
 If you omit the path, the ls command will check the content of your current directory. To list items inside subfolders, add the -R option. 
 Meanwhile, use -a to show hidden content.
 
-**2. pwd command**
+**2. pwd **
 
-To check the full path of your current working directory, use the pwd command. Its syntax is as follows:
+To check the full path of your current working directory, use the ``pwd`` command. Its syntax is as follows:
 
-pwd [options]
-The pwd command has only two options. The -L option prints environment variable content, like shortcuts, instead of the actual path of your 
-current location. Meanwhile, -P outputs the exact location.
+.. code:: Bash
+
+   pwd [options]
+
+The ``pwd`` command has only two options. The ``-L`` option prints environment variable content, like shortcuts, instead of the actual path of 
+your 
+current location. Meanwhile, ``-P`` outputs the exact location.
 
 For example, /shortcut/folder is a shortcut for /actual/path, and you are currently in /actual/path/dir. If you use the -L option, the output 
 will be:
 
 /shortcut/folder/dir
+
 Meanwhile, the -P option will print the exact canonical path:
 
 /actual/path/dir
 
-**3. cd command**
+**3. cd**
 
-Use cd to navigate between directories in your Linux VPS. It doesn’t have any option, and the syntax is simple:
+Use ``cd`` to navigate between directories in your Linux VPS. It doesn’t have any option, and the syntax is simple:
 
 cd [path_or_directory]
 Depending on your location, you might only need to specify the parent directory. For example, omit path from path/to/directory if you are 
