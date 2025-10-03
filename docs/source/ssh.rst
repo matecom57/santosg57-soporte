@@ -160,4 +160,184 @@ Si omites la longitud, Bash extraerá la subcadena desde la posición inicio has
 Esta técnica de subcadena se llama "expansión de parámetros" y se realiza directamente en Bash, sin la necesidad 
 de ejecutar comandos externos. 
 
+Bucles for en Bash
+------------------
+
+
+¿Cómo uso el bucle for de Bash para 
+repetir una tarea en Linux/UNIX? ¿Cómo puedo configurar bucles infinitos usando la instrucción for? ¿Cómo uso una 
+expresión de control de bucle for de Bash de tres parámetros?
+
+Un bucle for en bash es una sentencia del lenguaje de programación bash que permite la ejecución repetida de 
+código. Un bucle for se clasifica como una sentencia de iteración, es decir, consiste en la repetición de un 
+proceso dentro de un script bash. Por ejemplo, se puede ejecutar un comando o tarea de UNIX cinco veces, o leer y 
+procesar una lista de archivos mediante un bucle for. Un bucle for puede utilizarse en el intérprete de comandos 
+del shell o dentro del propio script del shell.
+
+**sintaxis del bucle for**
+
+Los rangos numéricos para la sintaxis son los siguientes:
+
+.. code:: Bash
+
+   for VARIABLE in 1 2 3 4 5 .. N
+   do
+     command1
+     command2
+     commandN
+   done
+
+.. code:: Bash
+
+   for VARIABLE in file1 file2 file3
+   do
+     command1 on $VARIABLE
+     command2
+     commandN
+   done
+
+.. code:: Bash
+
+   for OUTPUT in $(Linux-Or-Unix-Command-Here)
+   do
+     command1 on $OUTPUT
+     command2 on $OUTPUT
+     commandN
+   done
+
+**Ejemplos**
+
+.. code:: Bash
+
+   #!/bin/bash
+   for i in 1 2 3 4 5
+   do
+      echo "Welcome $i times"
+   done
+
+.. code:: Bash
+
+   #!/bin/bash
+   for i in {1..5}
+   do
+      echo "Welcome $i times"
+   done
+
+.. code:: Bash
+
+   #!/bin/bash
+   echo "Bash version ${BASH_VERSION}..."
+   for i in {0..10..2}
+   do
+     echo "Welcome $i times"
+   done
+
+.. code:: Bash
+
+   #!/bin/bash
+   for i in $(seq 1 2 20)
+   do
+      echo "Welcome $i times"
+   done
+
+**Sintaxis de bucles for de bash de tres expresiones**
+
+Este tipo de bucle for comparte una herencia común con el lenguaje de programación C. Se caracteriza por una 
+expresión de control de bucle de tres parámetros, que consta de un inicializador (EXP1), una prueba o condición de 
+bucle (EXP2) y una expresión/paso de conteo (EXP3).
+
+.. code:: Bash
+
+   for (( EXP1; EXP2; EXP3 ))
+   do
+    command1
+    command2
+    command3
+   done
+   ## The C-style Bash for loop ##
+   for (( initializer; condition; step )) 
+   do
+      shell_COMMANDS
+   done
+
+.. code:: Bash
+
+   #!/bin/bash
+   # set counter 'c' to 1 and condition 
+   # c is less than or equal to 5
+   for (( c=1; c<=5; c++ ))
+   do 
+      echo "Welcome $c times"
+   done
+
+**¿Cómo uso for como bucles infinitos ?**
+
+Se pueden crear bucles for infinitos con expresiones vacías, como:
+
+.. code:: Bash
+
+   #!/bin/bash
+   for (( ; ; ))
+   do
+      echo "infinite loops [ hit CTRL+C to stop]"
+   done
+
+**Salida condicional con interrupción**
+
+Puedes salir anticipadamente con la sentencia break dentro del bucle for. Puedes salir de un bucle FOR, WHILE o 
+UNTIL usando break. Sentencia break general dentro del bucle for:
+
+.. code:: Bash
+
+   for I in 1 2 3 4 5
+   do
+     statements1      #Executed for all values of ''I'', up to a disaster-condition if any.
+     statements2
+     if (disaster-condition)
+     then
+       break              #Abandon the loop.
+     fi
+     statements3              #While good and, no disaster-condition.
+   done
+
+
+El siguiente script de shell revisará todos los archivos almacenados en el directorio /etc. El bucle for se 
+abandonará cuando se encuentre el archivo /etc/resolv.conf :
+
+.. code:: Bash
+
+   #!/bin/bash
+   # Count dns name server in the /etc/resolv.conf if found
+   for file in /etc/*
+   do
+        # check if file exists in bash using the if #  
+    if [ "${file}" == "/etc/resolv.conf" ]
+    then
+        countNameservers=$(grep -c nameserver /etc/resolv.conf)
+        echo "Total dns ${countNameservers} nameservers defined in ${file}"
+        break
+    fi
+   done
+
+**Continuación temprana con instrucción continue**
+
+Para reanudar la siguiente iteración del bucle FOR, WHILE o UNTIL, utilice la instrucción continue.
+
+.. code:: Bash
+
+   for I in 1 2 3 4 5
+   do
+     statements1      #Executed for all values of ''I'', up to a disaster-condition if any.
+     statements2
+     if (condition)
+     then
+       continue   #Go to next iteration of I in the loop and skip statements3
+     fi
+     statements3
+   done
+
+https://www.cyberciti.biz/faq/bash-for-loop/
+
+
+
 
