@@ -81,13 +81,17 @@ The location of the log files varies depending on the operating system. Common l
 Extraer una subcadena
 ---------------------
 
-En Bash, para extraer una subcadena utilizas la sintaxis ${variable:inicio:longitud}, donde inicio es la posición 
+En Bash, para extraer una subcadena utilizas la sintaxis ``${variable:inicio:longitud}``, donde inicio es la 
+posición 
 (basada en 0) desde donde quieres extraer y longitud es la cantidad de caracteres a extraer. Por ejemplo, 
-${mi_cadena:2:4} extraerá 4 caracteres de la variable mi_cadena comenzando desde el tercer carácter (índice 2). 
+``${mi_cadena:2:4}`` extraerá 4 caracteres de la variable **i_cadena** comenzando desde el tercer carácter (índice 
+2). 
 
 **Sintaxis básica:**
 
-${cadena:inicio:longitud} 
+.. code:: Bash
+
+   ${cadena:inicio:longitud} 
 
 **cadena**
 
@@ -129,7 +133,7 @@ bash
 
    echo "${mi_cadena:0:4}"
 
-Salida: Hola (comienza en el índice 0 y extrae 4 caracteres). 
+   Salida: Hola (comienza en el índice 0 y extrae 4 caracteres). 
 
 **Extraer solo un carácter:**
 
@@ -139,7 +143,7 @@ Salida: Hola (comienza en el índice 0 y extrae 4 caracteres).
 
    echo "${mi_cadena:6:1}"
 
-Salida: M (comienza en el índice 6 y extrae 1 carácter). 
+   Salida: M (comienza en el índice 6 y extrae 1 carácter). 
 
 **Consideraciones:**
 
