@@ -5,8 +5,6 @@ List of MRtrix3 commands
 ########################
 
 
-
-
 .. toctree::
     :hidden:
 
