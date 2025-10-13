@@ -4,6 +4,7 @@
 List of MRtrix3 commands
 ########################
 
+https://mrtrix.readthedocs.io/en/dev/reference/commands_list.html
 
 .. toctree::
     :hidden:
