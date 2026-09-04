@@ -3,6 +3,11 @@ cuda
 
 **2.1.2. Kernels**
 
+.. video:: movie.mp4
+   :width: 640
+   :autoplay:
+   :controls:
+
 As mentioned in the introduction to the CUDA Programming Model, functions which execute on the GPU which can be invoked from the host are called kernels. Kernels are written to be run by many parallel threads simultaneously.
 
 2.1.2.1. Specifying Kernels
