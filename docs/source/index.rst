@@ -35,5 +35,6 @@ Contents
    resetea_repetidamente
    sensors
    journalctl
+   cuda/cuda
 
 
