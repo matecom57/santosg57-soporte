@@ -1,12 +1,19 @@
 cuda
 ====
 
-**2.1.2. Kernels-1**
+**2.1.2. Kernels-2**
 
 .. video:: movie.mp4
    :width: 640
    :autoplay:
    :controls:
+
+.. raw:: html
+
+   <video controls width="640">
+      <source src="../_static/movie.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+   </video>
 
 As mentioned in the introduction to the CUDA Programming Model, functions which execute on the GPU which can be invoked from the host are called kernels. Kernels are written to be run by many parallel threads simultaneously.
 
