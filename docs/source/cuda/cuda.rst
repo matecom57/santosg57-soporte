@@ -1,7 +1,7 @@
 cuda
 ====
 
-**2.1.2. Kernels**
+**2.1.2. Kernels-1**
 
 .. video:: movie.mp4
    :width: 640
