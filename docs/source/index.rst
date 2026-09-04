@@ -33,5 +33,7 @@ Contents
    comandos_linux
    comandos_ss
    resetea_repetidamente
+   sensors
+   journalctl
 
 
