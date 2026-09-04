@@ -32,5 +32,6 @@ Contents
    xnat/xnat
    comandos_linux
    comandos_ss
+   resetea_repetidamente
 
 
