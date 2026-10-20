@@ -31,4 +31,22 @@ $FREESURFER_HOME es otra variable que señala al directorio en el que se instal�
 ejemplo, /usr/local/freesurfer). En otras palabras, los resultados de este comando recon-all se 
 encontrarán en /usr/local/freesurfer/subjects.
 
+**recon_101.sh**
+
+.. code:: Bash
+
+   #!/bin/bash
+
+   #!/bin/bash
+   #
+   #$ -cwd
+   #$ -j y
+   #$ -S /bin/bash
+   #
+
+   module load freesurfer/7.4.1 
+
+   export SUBJECTS_DIR=/misc/fmenaj/santosg/Andy/FreeSurfer_Datos/ds000174-download/sub-101/ses-BL/anat
+
+   recon-all -s sub-101 -i sub-101_ses-BL_T1w.nii.gz -all
 
