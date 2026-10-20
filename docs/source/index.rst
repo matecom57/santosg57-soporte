@@ -36,5 +36,6 @@ Contents
    sensors
    journalctl
    cuda/cuda
+   andy_freesurfer
 
 
