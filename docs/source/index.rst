@@ -40,4 +40,5 @@ Contents
    docker/doc01
    docker/comandos_esenciales
    python/jupyter
+   chrome
 

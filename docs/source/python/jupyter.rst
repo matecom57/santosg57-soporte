@@ -25,3 +25,9 @@ Once installed, launch JupyterLab with:
 
    jupyter lab
 
+.. code:: Bash
+
+   sudo apt install python3-jupyterlab
+   sudo apt install jupyter-core
+
+
