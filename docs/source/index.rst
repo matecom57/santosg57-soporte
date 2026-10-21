@@ -39,4 +39,5 @@ Contents
    andy_freesurfer
    docker/doc01
    docker/comandos_esenciales
+   python/jupyter
 
