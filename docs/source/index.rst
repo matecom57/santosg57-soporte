@@ -38,5 +38,5 @@ Contents
    cuda/cuda
    andy_freesurfer
    docker/doc01
-
+   docker/comandos_esenciales
 
